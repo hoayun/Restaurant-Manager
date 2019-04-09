@@ -1,13 +1,29 @@
-<h1 class="text-center">Host App (dining room tables)</h1>
+<h1 class="text-center">Host App (Dining Room Manager)</h1>
 <div class="row">
   <div class="col-md-6">
-    <h2 class="text-center">Tables not ready </h2>
+    <h2 class="text-center">Tables Ready </h2>
+     <ul>
+      {{#each tables}}
+      {{#if ready}}
+      <div class="ready">
+         <button class="change button btn-lg bg-success" data-id="{{id}}" data-ready="{{ready}}">
+        {{table_number}}
+        </button>
+      </div>
+      {{/if}}
+      {{/each}}
+    </ul>
+
+    
+  </div>
+  <div class="col-md-6">
+    <h2 class="text-center">Tables In Use </h2>
 
     <ul>
       {{#each tables}}
       {{#unless ready}}
       <div class="ready">
-        <button class="change" data-id="{{id}}" data-ready="{{ready}}">
+        <button class="change button btn-lg bg-secondary" data-id="{{id}}" data-ready="{{ready}}">
           {{table_number}}
 
 	</button>
@@ -16,33 +32,21 @@
       {{/unless}}
       {{/each}}
     </ul>
-  </div>
-  <div class="col-md-6">
     
     
-    <h2 class="text-center">Tables ready</h2>
+  
 
-    <ul>
-      {{#each tables}}
-      {{#if ready}}
-      <div class="ready">
-         <button class="change" data-id="{{id}}" data-ready="{{ready}}">
-        {{table_number}}
-        </button>
-      </div>
-      {{/if}}
-      {{/each}}
-    </ul>
+   
   </div>
 </div>
 
 
-<div class="card text-center">
+<div class="card text-center bg-transparent">
 <h2 class="text-center">Add a Table</h2>
 <form class="create-form ">
 
   <div class="form-group text-center">
-    <label for="ca">Tablenumber:</label>
+    <label for="ca">Table #</label>
     <input type="text" id="tablenumber" name="table_number">
   </div>
 

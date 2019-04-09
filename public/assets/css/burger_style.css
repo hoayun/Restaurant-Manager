@@ -1,0 +1,17 @@
+body {
+    background-image: url("../images/wall.jpg");
+    background-size: cover;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: gold;
+
+    
+   }
+   .centerfold{
+       margin-top: 30px;
+       background-color: rgba(117, 73, 6, 0.719)
+   }
+   .button{
+       width:100px;
+     float:left;
+
+   }
