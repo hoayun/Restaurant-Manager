@@ -11,6 +11,8 @@ else {
   password: "root",
   database: "burger_db"
 });
+}
+
 
 // Make connection.
 connection.connect(function(err) {
